@@ -125,13 +125,12 @@ export function SettingsClient({ settings }: { settings: Settings | null }) {
           <div className="text-xs space-y-1 font-mono text-muted-foreground">
             {[
               "NEXTAUTH_SECRET",
-              "APP_PASSWORD",
               "META_APP_ID",
               "META_APP_SECRET",
               "META_REDIRECT_URI",
               "DATABASE_URL",
               "BLOB_READ_WRITE_TOKEN",
-              "ANTHROPIC_API_KEY",
+              "GEMINI_API_KEY",
               "CRON_SECRET",
             ].map((key) => (
               <p key={key}>{key}</p>

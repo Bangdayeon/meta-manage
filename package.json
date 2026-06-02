@@ -7,14 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push"
+    "db:generate": "dotenvx run -f .env.local -- drizzle-kit generate",
+    "db:migrate": "dotenvx run -f .env.local -- drizzle-kit migrate",
+    "db:push": "dotenvx run -f .env.local -- drizzle-kit push"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.100.1",
     "@auth/drizzle-adapter": "^1.11.2",
     "@base-ui/react": "^1.5.0",
+    "@google/generative-ai": "^0.24.1",
     "@neondatabase/serverless": "^1.1.0",
     "@vercel/blob": "^2.4.0",
     "class-variance-authority": "^0.7.1",
